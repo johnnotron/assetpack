@@ -33,6 +33,7 @@ export interface PackTexturesOptions
     texturesToPack: {path: string, contents: Buffer}[];
     textureName: string;
     padding?: number;
+    border?: number;
     fixedSize?: boolean;
     powerOfTwo?: boolean;
     width?: number;
@@ -62,6 +63,7 @@ export async function packTextures(
         width: 1024,
         height: 1024,
         padding: 2,
+        border:2,
         fixedSize: false,
         powerOfTwo: false,
         allowTrim: true,
