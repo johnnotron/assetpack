@@ -1,6 +1,6 @@
 import type { PackTexturesOptions, PixiPacker } from './packTextures.js';
 
-export function fitTextureToPacker(bin: PixiPacker, { width, height, fixedSize, padding, powerOfTwo }: PackTexturesOptions)
+export function fitTextureToPacker(bin: PixiPacker, { width, height, fixedSize, border, powerOfTwo }: PackTexturesOptions)
 {
     if (!fixedSize)
     {
@@ -24,8 +24,8 @@ export function fitTextureToPacker(bin: PixiPacker, { width, height, fixedSize, 
             }
         }
 
-        height += padding ?? 0;
-        width += padding ?? 0;
+        height += border ?? 0;
+        width += border ?? 0;
 
         if (powerOfTwo)
         {
